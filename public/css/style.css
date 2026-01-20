@@ -1,0 +1,329 @@
+/* Simple modern responsive styles for CareVo Health Hub */
+
+:root{
+  --accent:#2b8cff;
+  --dark:#0b2545;
+  --muted:#868d9c;
+  --bg:#f7f9fc;
+  --card:#ffffff;
+  --radius:10px;
+  --max:1100px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{
+    box-sizing:border-box;
+}
+html,body{
+    height:100%;
+}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--dark);
+  line-height:1.5;
+}
+
+.container{
+  width:100%;
+  max-width:var(--max);
+  margin:0 auto;
+}
+
+/* Header */
+.site-header{
+  background:linear-gradient(0deg, rgba(255,255,255,0.75), rgba(255,255,255,0.75));
+  border-bottom:1px solid rgba(12,18,31,0.04);
+  position:sticky;
+  top:0;
+  z-index:60;
+  backdrop-filter: blur(6px);
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+  padding:1rem 0;
+}
+.logo a{
+  display:flex;
+  align-items:baseline;
+  gap:.6rem;
+  color:var(--dark);
+  text-decoration:none;
+}
+.logo-mark{
+  font-weight:700;
+  font-size:1.25rem;
+}
+.logo-sub{
+  font-size:.8rem;
+  color:var(--muted);
+}
+
+/* Nav */
+.main-nav{
+    display:flex;
+    align-items:center;
+}
+.nav-list{
+  list-style:none;
+  display:flex;
+  gap:.75rem;
+  margin:0;
+  padding:0;
+  align-items:center;
+}
+.nav-list a{
+    text-decoration:none;
+    color:var(--dark);
+    padding:.45rem .7rem; 
+    border-radius:7px;
+}
+.nav-list a:hover{ 
+    background:rgba(43,140,255,0.06);
+ }
+
+.btn-primary{
+  background:var(--accent);
+  color:white;
+  padding:.6rem .9rem;
+  border-radius:8px;
+  text-decoration:none;
+  display:inline-block;
+}
+.btn-outline{
+  border:1px solid rgba(11,37,69,0.08);
+  padding:.55rem .9rem;
+  border-radius:8px;
+  text-decoration:none;
+  color:var(--dark);
+}
+
+.nav-toggle{
+    display:none;
+    background:transparent;
+    border:0;
+    font-size:1.1rem;
+}
+
+/* Hero */
+.hero{
+  padding:2.25rem 0;
+}
+.hero-inner{
+  display:grid;
+  grid-template-columns:1fr 360px;
+  gap:1.5rem;
+  align-items:center;
+}
+.hero-copy h1{ 
+    margin:0 0 .5rem;
+    font-size:1.8rem;
+}
+.hero-copy p{ 
+    color:var(--muted);
+    margin:0 0 1rem;
+    max-width:50ch;
+}
+.hero-ctas{
+    display:flex; 
+    gap:.6rem;
+}
+.hero-card .card{
+  background:var(--card);
+  padding:1rem;
+  border-radius:var(--radius);
+  box-shadow:0 6px 18px rgba(11,22,50,0.04);
+}
+
+/* Sections */
+.why{ 
+    padding:1.5rem 0
+}
+.grid-3{
+    display:grid;
+    grid-template-columns:repeat(3,1fr); 
+    gap:1rem; 
+    margin-top:1rem;
+}
+.why-card{
+    background:var(--card);
+    padding:1rem; 
+    border-radius:10px;
+}
+
+/* CTA */
+.cta{ 
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:1.5rem 0;
+    background:linear-gradient(90deg, rgba(43,140,255,0.06), rgba(43,140,255,0.02));
+    padding:2rem; 
+    border-radius:10px;
+}
+.cta-inner{
+    display:flex;
+    align-items:center; 
+    justify-content:space-between;
+    gap:1rem;
+}
+
+/* Content pages */
+.content{ 
+    padding:1.25rem 0;
+}
+.service-group {
+    background: var(--card);
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+}
+
+/* Forms */
+.booking-form{
+    background:var(--card);
+    padding:1rem; 
+    border-radius:10px;
+    box-shadow:0 6px 18px rgba(11,22,50,0.04);
+}
+.booking-form fieldset{ 
+    border:0; 
+    margin:0 0 1rem; 
+    padding:0;
+}
+.booking-form label{ 
+    display:block; 
+    margin:0.45rem 0; 
+    font-size:.95rem; 
+    color:var(--dark);
+}
+.booking-form input[type="text"],
+.booking-form input[type="email"],
+.booking-form input[type="tel"],
+.booking-form input[type="number"],
+.booking-form input[type="date"],
+.booking-form select,
+.booking-form textarea{
+  width:100%;
+  padding:.6rem;
+  margin-top:.35rem;
+  border-radius:8px;
+  border:1px solid rgba(11,22,50,0.08);
+  background:white;
+}
+.test-grid{ 
+    display:grid; 
+    grid-template-columns:repeat(2, 1fr); 
+    gap:1rem;
+}
+.test-grid h4{ 
+    margin:0 0 .4rem;
+}
+.consent-label{ 
+    display:flex; 
+    gap:.6rem; 
+    align-items:center;
+}
+.form-actions{ 
+    margin-top:.8rem;
+}
+/* ADMIN */
+.admin-actions { 
+    display:flex; 
+    gap:12px; 
+    align-items:center; 
+    margin:12px 0; 
+}
+.bookings-list {
+    margin-top: 12px;
+    display: grid;
+    gap: 10px;
+}
+.booking-item {
+    padding: 12px;
+    border-radius: 10px;
+    background: var(--surface);
+    border: 1px solid rgba(11, 22, 50, 0.03);
+}
+
+.mono {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
+    font-size: 0.92rem;
+}
+/* Footer */
+.site-footer {
+    padding: 1rem 0;
+    margin-top: 2rem;
+    background: transparent;
+    color: var(--muted);
+}
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+/* Misc */
+.muted {
+    color: var(--muted);
+    font-size: .95rem
+}
+.req {
+    color: #c0392b;
+    margin-left: .2rem
+}
+.booking-response {
+    margin-top: .6rem;
+    font-weight: 600;
+    color: var(--accent)
+}
+/* Responsive */
+@media (max-width:900px){
+  .hero-inner{
+    grid-template-columns:1fr; 
+}
+  .grid-3{ 
+    grid-template-columns:1fr 1fr; 
+}
+  .test-grid{ 
+    grid-template-columns:1fr;
+}
+  .cta-inner{ 
+    flex-direction:column; 
+    align-items:flex-start; 
+}
+}
+@media (max-width:680px){
+  .grid-3{
+    grid-template-columns:1fr;
+ }
+  .nav-list {
+    display: none;
+    position: absolute;
+    right: 1rem;
+    top: 64px;
+    background: var(--card);
+    padding: .6rem;
+    box-shadow: 0 8px 28px rgba(11, 22, 50, 0.08);
+    border-radius: 8px;
+    flex-direction: column;
+  }
+  .nav-toggle {
+    display: inline-block;
+  }
+
+  .nav-list.show {
+    display: flex;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: .5rem;
+  }
+}

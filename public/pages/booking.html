@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Book Screening — CareVo Health Hub</title>
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo"><a href="/"><span class="logo-mark">CareVo</span><small class="logo-sub">Health
+                        Hub</small></a></div>
+            <nav class="main-nav" id="mainNav">
+                <button id="navToggle4" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+                <ul class="nav-list">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="book.html" class="btn-primary">Book Screening</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container content">
+        <h1>Request a Screening Appointment</h1>
+        <p>Complete the form below to request your laboratory screening appointment. Our team will contact you within 24
+            hours to confirm your booking and provide instructions.</p>
+
+        <div class="google-form-link">
+            <a href="https://forms.gle/your-google-form-link" target="_blank" rel="noopener" class="btn-outline">Open
+                Google Form (Optional)</a>
+            <small class="muted">Or use the form below to request a screening directly.</small>
+        </div>
+
+        <form id="bookingForm" class="booking-form" novalidate>
+            <fieldset>
+                <legend>SECTION 1: Personal Information</legend>
+                <label>Full Name <span class="req">*</span><input type="text" name="fullName" id="fullName"
+                        required></label>
+                <label>Phone Number (WhatsApp preferred) <span class="req">*</span><input type="tel" name="phone"
+                        id="phone" required placeholder="+23350555505"></label>
+                <label>Email Address <input type="email" name="email" id="email" placeholder="you@example.com"></label>
+                <label>Age <span class="req">*</span><input type="number" name="age" id="age" required min="0"></label>
+                <label>Sex <span class="req">*</span>
+                    <select name="sex" id="sex" required>
+                        <option value="">Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                    </select>
+                </label>
+                <label>University / Institution <span class="req">*</span><input type="text" name="institution"
+                        id="institution" required></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>SECTION 2: Health Information (Optional)</legend>
+                <label>Symptoms / Health Concerns <textarea name="symptoms" id="symptoms" rows="3"></textarea></label>
+                <label>Known Medical Conditions <textarea name="conditions" id="conditions" rows="2"></textarea></label>
+                <label>Current Medications <textarea name="meds" id="meds" rows="2"></textarea></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>SECTION 3: Laboratory Test Selection</legend>
+
+                <div class="test-grid">
+                    <div>
+                        <h4>Hematology</h4>
+                        <label><input type="checkbox" name="tests" value="FBC / CBC"> Full Blood Count (FBC /
+                            CBC)</label>
+                        <label><input type="checkbox" name="tests" value="Blood Grouping & Rhesus"> Blood Grouping &amp;
+                            Rhesus Factor</label>
+                        <label><input type="checkbox" name="tests" value="Malaria Test"> Malaria Test</label>
+                    </div>
+
+                    <div>
+                        <h4>Chemical Pathology</h4>
+                        <label><input type="checkbox" name="tests" value="Blood Sugar Tests"> Blood Sugar Tests (Fasting
+                            / Random / HbA1c)</label>
+                        <label><input type="checkbox" name="tests" value="Kidney & Liver Function Panel"> Kidney &amp;
+                            Liver Function Panel</label>
+                        <label><input type="checkbox" name="tests" value="Lipid Profile"> Lipid Profile</label>
+                    </div>
+
+                    <div>
+                        <h4>Microbiology / Parasitology</h4>
+                        <label><input type="checkbox" name="tests" value="Urine Analysis & Culture"> Urine Analysis
+                            &amp; Culture</label>
+                        <label><input type="checkbox" name="tests" value="Stool Examination"> Stool Examination</label>
+                        <label><input type="checkbox" name="tests" value="Swab Tests"> Swab Tests (HVS, Wound,
+                            Throat)</label>
+                    </div>
+
+                    <div>
+                        <h4>STI Screening</h4>
+                        <label><input type="checkbox" name="tests" value="HIV 1 & 2"> HIV 1 &amp; 2</label>
+                        <label><input type="checkbox" name="tests" value="Hepatitis B & C"> Hepatitis B &amp; C</label>
+                        <label><input type="checkbox" name="tests" value="Syphilis"> Syphilis (VDRL / RPR)</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>SECTION 4: Appointment Preference</legend>
+                <label>Preferred Screening Date <input type="date" name="date" id="date"></label>
+                <label>Preferred Time Slot:
+                    <select name="timeSlot" id="timeSlot">
+                        <option value="">Select</option>
+                        <option>Morning</option>
+                        <option>Afternoon</option>
+                    </select>
+                </label>
+            </fieldset>
+
+            <fieldset class="consent">
+                <legend>SECTION 5: Consent</legend>
+                <label class="consent-label"><input type="checkbox" name="consent" id="consent" required> I confirm the
+                    information provided is accurate and consent to laboratory testing through licensed partner
+                    laboratories. I understand results will be handled confidentially.</label>
+            </fieldset>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">Request Screening Appointment</button>
+            </div>
+
+            <div id="bookingResponse" class="booking-response" role="status" aria-live="polite"></div>
+        </form>
+
+        <div class="note">
+            <p>Thank you. Your screening request will be reviewed and you'll be contacted via WhatsApp within 24 hours
+                to confirm the appointment.</p>
+        </div>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div><strong>CareVo Health Hub</strong></div>
+            <div class="disclaimer">CareVo Health operates in partnership with licensed diagnostic laboratories.</div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
