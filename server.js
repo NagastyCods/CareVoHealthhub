@@ -144,7 +144,7 @@ app.post('/api/bookings', async (req, res) => {
     const entry = { id: Date.now(), timestamp, payload };
     const current = JSON.parse(fs.readFileSync(REQUESTS_FILE, 'utf8'));
     current.push(entry);
-    fs.writeFileSync(REQUESTS_FILE, JSON.stringify(current, null, 2), 'utf8');
+    // fs.writeFileSync(REQUESTS_FILE, JSON.stringify(current, null, 2), 'utf8');
 
     // Attempt to send admin and user emails concurrently; do not block booking save on failures.
     if (transporter) {
