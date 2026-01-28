@@ -1,4 +1,4 @@
-// Small client JS for nav toggle and booking form submission
+// Small client JS for nav toggle, theme toggle, and booking form submission
 document.addEventListener('DOMContentLoaded', () => {
     // Nav toggle for mobile
     const toggles = document.querySelectorAll('.nav-toggle');
@@ -9,6 +9,48 @@ document.addEventListener('DOMContentLoaded', () => {
             nav.classList.toggle('show');
         });
     });
+
+    // Theme toggle (light / dark)
+    const themeToggle = document.getElementById('themeToggle');
+    const rootBody = document.body;
+
+    const applyTheme = (theme) => {
+        if (theme === 'dark') {
+            rootBody.classList.add('dark');
+        } else {
+            rootBody.classList.remove('dark');
+        }
+        if (themeToggle) {
+            const icon = themeToggle.querySelector('i');
+            if (icon) {
+                if (rootBody.classList.contains('dark')) {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                } else {
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                }
+            }
+        }
+    };
+
+    // Initialize theme from localStorage or system preference
+    const storedTheme = window.localStorage.getItem('carevo-theme');
+    if (storedTheme === 'dark' || storedTheme === 'light') {
+        applyTheme(storedTheme);
+    } else {
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        applyTheme(prefersDark ? 'dark' : 'light');
+    }
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const isDark = rootBody.classList.toggle('dark');
+            const newTheme = isDark ? 'dark' : 'light';
+            window.localStorage.setItem('carevo-theme', newTheme);
+            applyTheme(newTheme);
+        });
+    }
 
     // Booking form
     const bookingForm = document.getElementById('bookingForm');

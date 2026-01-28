@@ -6,35 +6,48 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Book Screening — CareVo Health Hub</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css" />
 </head>
 
 <body>
     <header class="site-header">
         <div class="container header-inner">
-            <div class="logo"><a href="/"><span class="logo-mark">CareVo</span><small class="logo-sub">Health
-                        Hub</small></a></div>
+            <div class="logo">
+                <a href="/">
+                    <i class="fa-solid fa-heart-pulse logo-icon"></i>
+                    <span class="logo-mark">CareVo</span>
+                    <small class="logo-sub">Health Hub</small>
+                </a>
+            </div>
             <nav class="main-nav" id="mainNav">
-                <button id="navToggle4" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+                <button id="navToggle4" class="nav-toggle" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
                 <ul class="nav-list">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="book.html" class="btn-primary">Book Screening</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="/"><i class="fa-solid fa-house"></i>Home</a></li>
+                    <li><a href="about.html"><i class="fa-solid fa-circle-info"></i>About</a></li>
+                    <li><a href="services.html"><i class="fa-solid fa-flask"></i>Services</a></li>
+                    <li><a href="booking.html" class="btn-primary"><i class="fa-solid fa-calendar-check"></i>Book Screening</a></li>
+                    <li><a href="contact.html"><i class="fa-solid fa-envelope"></i>Contact</a></li>
                 </ul>
             </nav>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
         </div>
     </header>
 
     <main class="container content">
-        <h1>Request a Screening Appointment</h1>
+        <h1><i class="fa-solid fa-calendar-check"></i>Request a Screening Appointment</h1>
         <p>Complete the form below to request your laboratory screening appointment. Our team will contact you within 24
             hours to confirm your booking and provide instructions.</p>
 
         <div class="google-form-link">
-            <a href="https://forms.gle/your-google-form-link" target="_blank" rel="noopener" class="btn-outline">Open
-                Google Form (Optional)</a>
+            <a href="https://forms.gle/your-google-form-link" target="_blank" rel="noopener" class="btn-outline">
+                <i class="fa-brands fa-google-drive"></i>
+                Open Google Form (Optional)
+            </a>
             <small class="muted">Or use the form below to request a screening directly.</small>
         </div>
 

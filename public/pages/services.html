@@ -6,66 +6,81 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Services — CareVo Health Hub</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css" />
 </head>
 
 <body>
     <header class="site-header">
         <div class="container header-inner">
-            <div class="logo"><a href="/"><span class="logo-mark">CareVo</span><small class="logo-sub">Health
-                        Hub</small></a></div>
+            <div class="logo">
+                <a href="/">
+                    <i class="fa-solid fa-heart-pulse logo-icon"></i>
+                    <span class="logo-mark">CareVo</span>
+                    <small class="logo-sub">Health Hub</small>
+                </a>
+            </div>
             <nav class="main-nav" id="mainNav">
-                <button id="navToggle3" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+                <button id="navToggle3" class="nav-toggle" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
                 <ul class="nav-list">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html" class="active">Services</a></li>
-                    <li><a href="booking.html" class="btn-primary">Book Screening</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="/"><i class="fa-solid fa-house"></i>Home</a></li>
+                    <li><a href="about.html"><i class="fa-solid fa-circle-info"></i>About</a></li>
+                    <li><a href="services.html" class="active"><i class="fa-solid fa-flask"></i>Services</a></li>
+                    <li><a href="booking.html" class="btn-primary"><i class="fa-solid fa-calendar-check"></i>Book Screening</a></li>
+                    <li><a href="contact.html"><i class="fa-solid fa-envelope"></i>Contact</a></li>
                 </ul>
             </nav>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
         </div>
     </header>
 
     <main class="container content">
-        <h1>Our Laboratory Services</h1>
+        <h1><i class="fa-solid fa-flask-vial"></i>Our Laboratory Services</h1>
         <p class="muted">Select any laboratory test from the list. All tests are conducted by licensed partner
             laboratories with professional result interpretation and confidentiality assurance.</p>
 
-        <section class="section1">
-            <h2>Hematology</h2>
-            <ul>
-                <li>Full Blood Count (FBC / CBC)</li>
-                <li>Blood Grouping &amp; Rhesus Factor</li>
-                <li>Malaria Test</li>
-            </ul>
-        </section>
+        <section class="section-services">
+            <div class="services-grid">
+                <article class="service-card">
+                    <h2><i class="fa-solid fa-droplet"></i>Hematology</h2>
+                    <ul>
+                        <li><i class="fa-solid fa-vial"></i>Full Blood Count (FBC / CBC)</li>
+                        <li><i class="fa-solid fa-droplet"></i>Blood Grouping &amp; Rhesus Factor</li>
+                        <li><i class="fa-solid fa-bug-slash"></i>Malaria Test</li>
+                    </ul>
+                </article>
 
-        <section class="section2">
-            <h2>Chemical Pathology</h2>
-            <ul>
-                <li>Blood Sugar Tests (Fasting / Random / HbA1c)</li>
-                <li>Kidney &amp; Liver Function Panel</li>
-                <li>Lipid Profile</li>
-            </ul>
-        </section>
+                <article class="service-card">
+                    <h2><i class="fa-solid fa-flask"></i>Chemical Pathology</h2>
+                    <ul>
+                        <li><i class="fa-solid fa-syringe"></i>Blood Sugar Tests (Fasting / Random / HbA1c)</li>
+                        <li><i class="fa-solid fa-vials"></i>Kidney &amp; Liver Function Panel</li>
+                        <li><i class="fa-solid fa-heart-pulse"></i>Lipid Profile</li>
+                    </ul>
+                </article>
 
-        <section class="section3">
-            <h2>Microbiology / Parasitology</h2>
-            <ul>
-                <li>Urine Analysis &amp; Culture</li>
-                <li>Stool Examination</li>
-                <li>Swab Tests (HVS, Wound, Throat)</li>
-            </ul>
-        </section>
+                <article class="service-card">
+                    <h2><i class="fa-solid fa-microscope"></i>Microbiology / Parasitology</h2>
+                    <ul>
+                        <li><i class="fa-solid fa-vial-circle-check"></i>Urine Analysis &amp; Culture</li>
+                        <li><i class="fa-solid fa-bacteria"></i>Stool Examination</li>
+                        <li><i class="fa-solid fa-swatchbook"></i>Swab Tests (HVS, Wound, Throat)</li>
+                    </ul>
+                </article>
 
-        <section class="section4">
-            <h2>STI Screening</h2>
-            <ul>
-                <li>HIV 1 &amp; 2</li>
-                <li>Hepatitis B &amp; C</li>
-                <li>Syphilis (VDRL / RPR)</li>
-            </ul>
+                <article class="service-card">
+                    <h2><i class="fa-solid fa-ribbon"></i>STI Screening</h2>
+                    <ul>
+                        <li><i class="fa-solid fa-ribbon"></i>HIV 1 &amp; 2</li>
+                        <li><i class="fa-solid fa-shield-virus"></i>Hepatitis B &amp; C</li>
+                        <li><i class="fa-solid fa-vial-virus"></i>Syphilis (VDRL / RPR)</li>
+                    </ul>
+                </article>
+            </div>
         </section>
 
         <div class="professional-disclaimer">

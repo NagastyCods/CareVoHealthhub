@@ -30,6 +30,16 @@ body{
   padding:3rem 2rem;
 }
 
+/* Dark theme variables */
+body.dark {
+  --bg:#020617;
+  --card:#020617;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+  --dark:#e5e7eb;
+  --accent:#60a5fa;
+}
+
 .container{
   width:100%;
   max-width:var(--max);
@@ -123,6 +133,33 @@ body{
   background: transparent;
   border: 0;
   font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.theme-toggle {
+  margin-left: .5rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: 1px solid rgba(15,23,42,0.12);
+  background: rgba(255,255,255,0.9);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--dark);
+  transition: background .18s ease, color .18s ease, border-color .18s ease, transform .12s ease;
+}
+
+.theme-toggle:hover {
+  background: rgba(15,23,42,0.04);
+  transform: translateY(-1px);
+}
+
+body.dark .theme-toggle {
+  background: rgba(15,23,42,0.9);
+  border-color: rgba(148,163,184,0.6);
+  color: #e5e7eb;
 }
 
 /* Hero */
@@ -155,6 +192,9 @@ body{
   padding:1rem;
   border-radius:var(--radius);
   box-shadow:0 6px 18px rgba(11,22,50,0.04);
+}
+ul.features li{
+  list-style: none;
 }
 
 /* Sections */
@@ -281,6 +321,9 @@ ul.values li::before{
   border-left:6px solid var(--accent); 
   background:linear-gradient(90deg, rgba(107,114,128,0.03), transparent); 
 }
+ul li{
+  list-style: none;
+}
 
 
 /* Forms */
@@ -312,8 +355,9 @@ ul.values li::before{
   padding:.6rem;
   margin-top:.35rem;
   border-radius:8px;
-  border:1px solid rgba(11,22,50,0.08);
-  background:white;
+  border:1px solid rgba(11,22,50,0.3);
+  background:var(--card);
+  color:var(--text);
 }
 .test-grid {
   display: grid;
@@ -394,6 +438,183 @@ a, button {
     margin-top: .6rem;
     font-weight: 600;
     color: var(--accent)
+}
+
+/* Font Awesome helpers & icon spacing */
+.logo-icon {
+  color: var(--accent);
+  margin-right: 6px;
+  font-size: 1.4rem;
+}
+
+.nav-list i {
+  margin-right: 6px;
+}
+
+.features i {
+  color: var(--accent);
+  margin-right: 8px;
+}
+
+.why-icon {
+  font-size: 1.6rem;
+  color: var(--accent);
+  margin-bottom: 6px;
+  display: inline-block;
+}
+
+.btn-primary i,
+.btn-outline i {
+  margin-right: 6px;
+}
+
+.footer-right i {
+  color: var(--accent);
+  margin-right: 6px;
+}
+
+.content h1 i,
+.content h2 i {
+  color: var(--accent);
+  margin-right: 8px;
+}
+
+.values li i {
+  color: var(--accent);
+  margin-right: 10px;
+}
+
+.section1,
+.section2,
+.section3,
+.section4 {
+  margin-bottom: 2rem;
+}
+
+/* Services grid cards */
+.section-services {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.service-card {
+  background-color: var(--card);
+  padding: 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 8px 18px rgba(11, 22, 50, 0.06);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(11, 22, 50, 0.08);
+}
+
+.service-card h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+}
+
+.service-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-card ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.4rem 0;
+  font-size: 0.98rem;
+  color: var(--text);
+}
+
+.service-card ul li i {
+  color: var(--accent);
+  min-width: 24px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.professional-disclaimer {
+  background-color: #e6f0ff;
+  border-left: 5px solid var(--accent);
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+/* Dark theme element tweaks */
+body.dark {
+  background: radial-gradient(circle at top, #1e293b 0%, #020617 50%, #020617 100%);
+}
+
+body.dark .site-header{
+  background: linear-gradient(0deg, rgba(15,23,42,0.96), rgba(15,23,42,0.96));
+  border-bottom-color: rgba(15,23,42,0.8);
+}
+
+body.dark .logo a{
+  color:#e5e7eb;
+}
+
+body.dark .logo-sub{
+  color:#9ca3af;
+}
+
+body.dark .nav-list a{
+  color:#e5e7eb;
+}
+
+body.dark .nav-list a:hover{
+  background:rgba(148,163,184,0.15);
+}
+
+body.dark .container.content{
+  background: radial-gradient(circle at top left, #0b1120 0%, #020617 55%, #020617 100%);
+  box-shadow: 0 18px 45px rgba(15,23,42,0.8);
+}
+
+body.dark .why-card,
+body.dark .hero-card .card,
+body.dark .booking-form,
+body.dark .service-card{
+  background: #020617;
+  box-shadow: 0 12px 30px rgba(15,23,42,0.9);
+}
+
+body.dark section{
+  background: linear-gradient(90deg, rgba(15,23,42,0.5), transparent);
+  box-shadow: 0 10px 30px rgba(15,23,42,0.9);
+}
+
+body.dark .cta{
+  background: linear-gradient(90deg, rgba(37,99,235,0.35), rgba(37,99,235,0.08));
+}
+
+body.dark .site-footer{
+  color:#9ca3af;
+}
+
+body.dark .footer-inner{
+  background: linear-gradient(90deg,#0f172a,#020617);
+}
+
+body.dark .professional-disclaimer{
+  background-color: rgba(30,64,175,0.35);
 }
 /* Responsive */
 /* ================================

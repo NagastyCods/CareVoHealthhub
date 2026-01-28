@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>CareVo Health Hub — Student Health Screening</title>
     <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css" />
     <meta name="description"
         content="Student-focused laboratory screening and preventive care guidance for university campuses." />
@@ -16,21 +17,29 @@
         <div class="container header-inner">
             <div class="logo">
                 <a href="/" aria-label="CareVo Health Hub homepage">
+                    <i class="fa-solid fa-heart-pulse logo-icon"></i>
                     <span class="logo-mark">CareVo</span>
                     <small class="logo-sub">Health Hub</small>
                 </a>
             </div>
 
             <nav class="main-nav" id="mainNav">
-                <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+                <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
                 <ul class="nav-list">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="./pages/about.html">About</a></li>
-                    <li><a href="./pages/services.html">Services</a></li>
-                    <li><a href="./pages/booking.html" class="btn-primary">Book Screening</a></li>
-                    <li><a href="./pages/services.html">Contact</a></li>
+                    <li><a href="/"><i class="fa-solid fa-house"></i>Home</a></li>
+                    <li><a href="./pages/about.html"><i class="fa-solid fa-circle-info"></i>About</a></li>
+                    <li><a href="./pages/services.html"><i class="fa-solid fa-flask"></i>Services</a></li>
+                    <li><a href="./pages/booking.html" class="btn-primary"><i class="fa-solid fa-calendar-check"></i>Book
+                            Screening</a></li>
+                    <li><a href="./pages/contact.html"><i class="fa-solid fa-envelope"></i>Contact</a></li>
                 </ul>
             </nav>
+
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
         </div>
     </header>
 
@@ -44,18 +53,25 @@
                         preventive care guidance tailored for university students.
                     </p>
                     <div class="hero-ctas">
-                        <a href="./pages/booking.html" class="btn-primary">Book Screening</a>
-                        <a href="./pages/services.html" class="btn-outline">Our Services</a>
+                        <a href="./pages/booking.html" class="btn-primary">
+                            <i class="fa-solid fa-calendar-check"></i>
+                            Book Screening
+                        </a>
+                        <a href="./pages/services.html" class="btn-outline">
+                            <i class="fa-solid fa-flask-vial"></i>
+                            Our Services
+                        </a>
                     </div>
                 </div>
                 <div class="hero-card">
                     <div class="card">
-                        <h3>Campus-focused</h3>
+                        <h3><i class="fa-solid fa-building-columns"></i>Campus-focused</h3>
                         <p>Affordable, accessible screening coordinated with partner laboratories.</p>
                         <ul class="features">
-                            <li>Trained Medical Laboratory Scientists</li>
-                            <li>Confidential results & professional interpretation</li>
-                            <li>Preventive health education for students</li>
+                            <li><i class="fa-solid fa-user-nurse"></i>Trained Medical Laboratory Scientists</li>
+                            <li><i class="fa-solid fa-shield-heart"></i>Confidential results & professional interpretation
+                            </li>
+                            <li><i class="fa-solid fa-graduation-cap"></i>Preventive health education for students</li>
                         </ul>
                     </div>
                 </div>
@@ -63,17 +79,20 @@
         </section>
 
         <section class="why container">
-            <h2>Why CareVo Health Hub?</h2>
+            <h2><i class="fa-solid fa-star-of-life"></i>Why CareVo Health Hub?</h2>
             <div class="grid-3">
                 <article class="why-card">
+                    <i class="fa-solid fa-vial-circle-check why-icon"></i>
                     <h3>Accuracy & Quality</h3>
                     <p>Tests conducted via licensed partner laboratories with QA processes.</p>
                 </article>
                 <article class="why-card">
+                    <i class="fa-solid fa-user-shield why-icon"></i>
                     <h3>Confidentiality</h3>
                     <p>Student data is handled confidentially according to professional standards.</p>
                 </article>
                 <article class="why-card">
+                    <i class="fa-solid fa-user-graduate why-icon"></i>
                     <h3>Student-first</h3>
                     <p>Services designed for the campus lifestyle — quick, clear, and affordable.</p>
                 </article>
@@ -82,9 +101,14 @@
 
         <section class="cta container">
             <div class="cta-inner">
-                <h3>Ready to screen?</h3>
-                <p>Request a screening appointment and our team will contact you within 24 hours.</p>
-                <a href="./pages/booking.html" class="btn-primary large">Request Screening Appointment</a>
+                <div class="cta-copy">
+                    <h3><i class="fa-solid fa-calendar-days"></i>Ready to screen?</h3>
+                    <p>Request a screening appointment and our team will contact you within 24 hours.</p>
+                </div>
+                <a href="./pages/booking.html" class="btn-primary large">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Request Screening Appointment
+                </a>
             </div>
         </section>
     </main>
@@ -96,8 +120,13 @@
                 <p>University Campus Outreach-Based Service Model</p>
             </div>
             <div class="footer-right">
-                <p>Contact: <a href="mailto:carevohealthhub@gmail.com">carevohealthhub@gmail.com</a> | WhatsApp: <a
-                        href="https://wa.me/233557407385" target="_blank" rel="noopener">+233557407385</a></p>
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:carevohealthhub@gmail.com">carevohealthhub@gmail.com</a>
+                    &nbsp;|&nbsp;
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <a href="https://wa.me/233557407385" target="_blank" rel="noopener">+233557407385</a>
+                </p>
                 <p class="disclaimer">
                     CareVo Health operates in partnership with licensed diagnostic laboratories. All personal health
                     data is handled confidentially in accordance with professional healthcare ethics and data protection
