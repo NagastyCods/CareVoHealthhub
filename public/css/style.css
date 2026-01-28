@@ -73,10 +73,24 @@ body.dark {
 }
 .logo a{
   display:flex;
-  align-items:baseline;
+  align-items:center;
   gap:.6rem;
   color:var(--dark);
   text-decoration:none;
+}
+.logo-img{
+  display:block;
+  height:42px;
+  width:42px;
+  border-radius:999px;
+  object-fit:cover;
+}
+
+@media (max-width: 640px){
+  .logo-img{
+    height:34px;
+    width:34px;
+  }
 }
 .logo-mark{
   font-weight:700;
